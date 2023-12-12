@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>F8 Project 3</title>
   </head>
   <body>
@@ -48,8 +49,8 @@
             </div>
           </div>
           <div class="hero__right">
-            <img class="hero__img img-01" src="./assets/img/img-01.jpg" alt="img-01" />
-            <img class="hero__img img-02 none-active-img" src="./assets/img/img-02.jpg" alt="img-02" />
+            <img class="hero__img img-01" src="./assets/img/header__hero-img-01.jpg" alt="img-01" />
+            <img class="hero__img img-02 none-active-img" src="./assets/img/header__hero-img-02.jpg" alt="img-02" />
           </div>
         </div>
       </div>
@@ -57,7 +58,63 @@
 
     <!-- TODO: Main content -->
     <div class="main">
-      <div class="services"></div>
+      <!-- TODO: Services -->
+      <div class="services">
+        <div class="container">
+          <h2 class="services__title">Our services</h2>
+          <p class="services__desc">Exceptional dental care for all ages. Your great smile begins with a great dentist.</p>
+          <div class="services__illustration">
+            <div class="left">
+              <img src="./assets/img/services__img.jpg" alt="services__img" class="services__img">
+            </div>
+            <div class="right">
+              <ul class="services__list">
+                <li class="services__item">
+                  <div class="left">
+                    <div class="item__icon">
+                      <i class="fa-solid fa-tooth"></i>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="item__title">Oral Sergery</h3>
+                    <p class="item__desc">
+                      Everything you expect and then some. Cleanings, fillings, and x-rays.
+                    </p>
+                  </div>
+                </li>
+                <li class="services__item">
+                  <div class="left">
+                    <div class="item__icon">
+                      <i class="fa-solid fa-tooth"></i>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="item__title">Oral Sergery</h3>
+                    <p class="item__desc">
+                      Everything you expect and then some. Cleanings, fillings, and x-rays.
+                    </p>
+                  </div>
+                </li>
+                <li class="services__item">
+                  <div class="left">
+                    <div class="item__icon">
+                      <i class="fa-solid fa-tooth"></i>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="item__title">Oral Sergery</h3>
+                    <p class="item__desc">
+                      Everything you expect and then some. Cleanings, fillings, and x-rays.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <button class="services__btn btn">All Services</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="dentists">
         <div class="dentists__heading"></div>
         <div class="dentists__meet-btn"></div>
@@ -84,6 +141,8 @@
         })
       }
     
+
+      // Change status of active button of Login SignUp
       const listHeaderBtn=document.getElementsByClassName("header__btn");
       for (var i = 0; i< listHeaderBtn.length; i++){
           listHeaderBtn[i].addEventListener("mouseover",function(){
@@ -92,6 +151,16 @@
           this.className+=" active-btn"
         })
       }
+
+      // const listServices=document.getElementsByClassName("services__item");
+      // for (var i = 0; i< listServices.length; i++){
+      //     listServices[i].addEventListener("mouseover",function(){
+      //     var current = document.getElementsByClassName("active-btn");
+      //     current[0].className=current[0].className.replace(" active-btn", "");
+      //     this.className+=" active-btn"
+      //   })
+      // }
+
       // document.getElementById("login").addEventListener("mouseover",changeStyle);
       // function changeStyle(){
       //   const element1 = document.getElementById("login");

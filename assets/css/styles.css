@@ -173,4 +173,103 @@ body {
 .header .hero__right .img-02 {
   width: 210px;
   height: 410px;
+}
+
+.services {
+  margin-top: 170px;
+  margin-bottom: 170px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services .container .services__title {
+  color: #10375c;
+  text-align: center;
+  font-family: Sora;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 60px;
+  /* 120% */
+  letter-spacing: -1px;
+}
+.services .container .services__desc {
+  margin-top: 18px;
+  color: #575f66;
+  text-align: center;
+  font-family: Sora;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  /* 166.667% */
+}
+.services .container .services__illustration {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services .container .services__illustration .left .services__img {
+  width: 570px;
+  height: 570px;
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.services .container .services__illustration .right {
+  width: 470px;
+}
+.services .container .services__illustration .right .services__list .services__item {
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  background: #FFF;
+}
+.services .container .services__illustration .right .services__list .services__item .left .item__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #EFF6FD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services .container .services__illustration .right .services__list .services__item .left .item__icon i {
+  font-size: 3rem;
+  color: #10375C;
+}
+.services .container .services__illustration .right .services__list .services__item .right {
+  margin-left: 19px;
+}
+.services .container .services__illustration .right .services__list .services__item .right .item__title {
+  color: #10375C;
+  font-family: Sora;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.services .container .services__illustration .right .services__list .services__item:hover {
+  box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+}
+.services .container .services__illustration .right .services__list .services__item:hover .item__icon {
+  background-color: #2e80ce;
+}
+.services .container .services__illustration .right .services__list .services__item:hover .item__icon i {
+  color: #fff;
+}
+.services .container .services__illustration .right .services__btn {
+  margin-top: 55px;
+  width: 205px;
+  color: #FFF;
+  border-radius: 30px;
+  text-align: center;
+  font-family: Sora;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  /* 166.667% */
 }/*# sourceMappingURL=styles.css.map */
