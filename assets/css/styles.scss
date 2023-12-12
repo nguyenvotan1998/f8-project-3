@@ -22,6 +22,7 @@ body {
 }
 
 .btn {
+  width: 205px;
   height: 60px;
   border: none;
   border-radius: 30px;
@@ -201,12 +202,12 @@ body {
   margin-top: 170px;
   margin-bottom: 170px;
   width: 100%;
-  // height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .container {
+
     .services__title {
       color: #10375c;
       text-align: center;
@@ -215,12 +216,12 @@ body {
       font-style: normal;
       font-weight: 600;
       line-height: 60px;
-      /* 120% */
       letter-spacing: -1px;
     }
 
     .services__desc {
       margin-top: 18px;
+      white-space: pre-line;
       color: #575f66;
       text-align: center;
       font-family: Sora;
@@ -255,7 +256,6 @@ body {
             padding: 20px;
             border-radius: 10px;
             background: #FFF;
-            // box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
 
             .left {
               .item__icon {
@@ -284,6 +284,16 @@ body {
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+              }
+
+              .item__desc {
+                margin-top: 8px;
+                color: #575F66;
+                font-family: Sora;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 28px;
               }
 
             }
@@ -318,4 +328,162 @@ body {
       }
     }
   }
+}
+
+// TODO: Procedure
+.procedure {
+  background-color: #f6fbff;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .procedure__title {
+      color: #10375C;
+      font-family: Sora;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 60px;
+      letter-spacing: -1px;
+    }
+
+    .procedure__desc {
+      margin-top: 18px;
+      color: #575F66;
+      font-family: Sora;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 30px;
+      white-space: pre-line;
+    }
+
+    .procedure__list {
+      display: flex;
+      gap: 30px;
+
+      .procedure__item {
+        margin-top: 70px;
+        border: #eaf6ff solid 16px;
+        padding: 43px 42px;
+        transition: border-color 1s ease, color 1s ease, transform 1s ease;
+
+        .item__title {
+          margin-top: 18px;
+          color: #10375C;
+          font-family: Sora;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 36px;
+        }
+
+        .item__desc,
+        .item__link {
+          color: #575F66;
+          font-family: Sora;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 28px;
+        }
+
+        .item__desc {
+          margin-top: 28px;
+        }
+
+        .item__link {
+          margin-top: 18px;
+        }
+      }
+
+      .procedure__item:hover {
+        border-color: #2e80ce;
+        transform: translateY(-16px);
+
+        .item__link {
+          color: #2e80ce;
+        }
+      }
+    }
+  }
+}
+
+// TODO: Commercial 
+.commercial {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    margin: 170px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .commercial__album {
+      width: 570px;
+      height: 491px;
+      position: relative;
+
+      .commercial__img-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 512px;
+        height: 370px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+
+      .commercial__img-2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 332px;
+        height: 370px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+    }
+
+    .commercial__content {
+      width: 470px;
+
+      .commercial__title {
+        color: #10375C;
+        font-family: Sora;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 60px;
+        letter-spacing: -1px;
+      }
+
+      .commercial__desc {
+        margin-top: 18px;
+        color: #575F66;
+        font-family: Sora;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 30px;
+      }
+
+      .commercial__btn {
+        margin-top: 38px;
+        color: #FFF;
+        text-align: center;
+        font-family: Sora;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+      }
+    }
+  }
+
 }
