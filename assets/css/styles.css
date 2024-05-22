@@ -6,6 +6,10 @@
   --desc-font-color: #575f66;
 }
 
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,6 +24,7 @@ body {
   font-style: normal;
   font-weight: 300;
   line-height: 3rem;
+  overflow: overlay;
 }
 
 .container {
@@ -47,6 +52,7 @@ a {
   line-height: 2.8rem;
 }
 
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -72,6 +78,7 @@ a {
   letter-spacing: -0.1rem;
 }
 
+/* TODO: Header */
 .header {
   width: 100%;
   height: 100vh;
@@ -84,24 +91,26 @@ a {
   display: flex;
   flex-direction: column;
 }
-.header .container .header__top {
+
+/* Top of Header */
+.header__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .container .header__top .header__nav {
+.header__nav {
   display: flex;
   gap: 42px;
 }
-.header .container .header__top .header__nav .header__link {
+.header__link {
   color: var(--none-active-font-color);
 }
-.header .container .header__top .header__nav .active-link {
+.header__nav .active-link {
   color: var(--active-font-color);
   font-weight: 400;
   position: relative;
 }
-.header .container .header__top .header__nav .active-link::after {
+.header__nav .active-link::after {
   content: "";
   width: 6px;
   height: 6px;
@@ -112,10 +121,10 @@ a {
   top: 50%;
   transform: translateY(-50%);
 }
-.header .container .header__top .header__group-btn {
+.header__group-btn {
   display: flex;
 }
-.header .container .header__top .header__group-btn .header__btn {
+.header__btn {
   width: 104px;
   height: 44px;
   border-radius: 22px;
@@ -123,18 +132,20 @@ a {
   color: var(--none-active-font-color);
   font-weight: 300;
 }
-.header .container .header__top .header__group-btn .active-btn {
+.header__group-btn .active-btn {
   background: var(--active-bg-color);
   color: var(--active-font-color);
   font-weight: 400;
 }
-.header .container .hero {
+
+/* Hero of Header */
+.hero {
   flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .container .hero .hero__left .hero__title {
+.hero__title {
   width: 517px;
   color: var(--active-font-color);
   font-size: 7rem;
@@ -166,22 +177,68 @@ a {
   font-size: 1.8rem;
   font-weight: 400;
 }
+
 .header .container .hero .hero__right {
+  width: 540px;
+  height: 540px;
   display: flex;
   align-items: center;
+  /* background-color: red; */
+  position: relative;
 }
-.header .container .hero .hero__right .hero__img {
+
+@keyframes imageHero {
+  0% {
+    width: 210px;
+    height: 410px;
+    right: 0;
+  }
+  100% {
+    width: 330px;
+    height: 540px;
+    right: 210px;
+  }
+}
+@keyframes imageHero2 {
+  0% {
+    width: 330px;
+    height: 540px;
+    left: 0;
+  }
+  100% {
+    width: 210px;
+    height: 410px;
+    left: 330px;
+  }
+}
+.hero .hero__right .hero__img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.hero .img-01 {
   width: 330px;
   height: 540px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 6px;
+  position: absolute;
+  animation-name: imageHero2;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .header .container .hero .hero__right .img-02 {
   width: 210px;
   height: 410px;
+  position: absolute;
+  right: 0;
+  animation-name: imageHero;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
+/* TODO: Main content */
 .main {
   margin: 170px 0;
   display: flex;
@@ -222,51 +279,109 @@ a {
   height: 570px;
   border-radius: 12px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: 0 0;
-     object-position: 0 0;
+  object-position: 0 0;
 }
 .services .container .services__illustration .right {
   width: 470px;
 }
-.services .container .services__illustration .right .services__list .services__item {
+.services
+  .container
+  .services__illustration
+  .right
+  .services__list
+  .services__item {
   display: flex;
   padding: 21px 0 20px 22px;
   border-radius: 10px;
-  background: #FFF;
+  background: #fff;
 }
-.services .container .services__illustration .right .services__list .services__item .left .item__icon {
+.services
+  .container
+  .services__illustration
+  .right
+  .services__list
+  .services__item
+  .left
+  .item__icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #EFF6FD;
+  background-color: #eff6fd;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.services .container .services__illustration .right .services__list .services__item .left .item__icon i {
+.services
+  .container
+  .services__illustration
+  .right
+  .services__list
+  .services__item
+  .left
+  .item__icon
+  i {
   font-size: 3rem;
   color: var(--bg-color);
 }
-.services .container .services__illustration .right .services__list .services__item .right {
+.services
+  .container
+  .services__illustration
+  .right
+  .services__list
+  .services__item
+  .right {
   margin-left: 19px;
 }
-.services .container .services__illustration .right .services__list .services__item .right .item__title {
+.services
+  .container
+  .services__illustration
+  .right
+  .services__list
+  .services__item
+  .right
+  .item__title {
   color: var(--bg-color);
   font-size: 18px;
   font-weight: 600;
   line-height: normal;
 }
-.services .container .services__illustration .right .services__list .services__item .right .item__desc {
+.services
+  .container
+  .services__illustration
+  .right
+  .services__list
+  .services__item
+  .right
+  .item__desc {
   margin-top: 8px;
 }
-.services .container .services__illustration .right .services__list .services__item:hover {
+.services
+  .container
+  .services__illustration
+  .right
+  .services__list
+  .services__item:hover {
   box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
 }
-.services .container .services__illustration .right .services__list .services__item:hover .item__icon {
+.services
+  .container
+  .services__illustration
+  .right
+  .services__list
+  .services__item:hover
+  .item__icon {
   background-color: var(--active-bg-color);
 }
-.services .container .services__illustration .right .services__list .services__item:hover .item__icon i {
+.services
+  .container
+  .services__illustration
+  .right
+  .services__list
+  .services__item:hover
+  .item__icon
+  i {
   color: var(--active-font-color);
 }
 .services .container .services__illustration .right .services__btn {
@@ -307,7 +422,7 @@ a {
   display: flex;
 }
 .procedure .container .procedure__list .procedure__item .item__title {
-  color: #10375C;
+  color: #10375c;
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
@@ -341,14 +456,14 @@ a {
 .commercial .container .commercial__album .commercial__img {
   position: absolute;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 6px;
 }
 .commercial .container .commercial__album .img-1 {
   width: 512px;
   height: 370px;
   -o-object-position: 0 center;
-     object-position: 0 center;
+  object-position: 0 center;
   top: 0;
   left: 0;
 }
@@ -356,7 +471,7 @@ a {
   width: 332px;
   height: 370px;
   -o-object-position: 0 center;
-     object-position: 0 center;
+  object-position: 0 center;
   bottom: 0;
   right: 0;
 }
@@ -374,10 +489,14 @@ a {
   margin-top: 20px;
 }
 
+/* ----------------------------------------------------------------------- */
+
+/* TODO: Dentists */
 .dentists {
   display: flex;
   justify-content: center;
 }
+
 .dentists .container {
   display: flex;
   flex-direction: column;
@@ -385,46 +504,53 @@ a {
   justify-content: center;
   gap: 38px;
 }
-.dentists .container .dentists__list {
+
+.dentists__heading {
+}
+
+.dentists__meet-btn {
+}
+
+.dentists__list {
   margin-top: 32px;
   display: flex;
   gap: 30px;
 }
-.dentists .container .dentists__list .dentists__item .dentist__wrap-avatar {
+.dentist__wrap-avatar {
   background-color: #eaf6ff;
   width: 270px;
   height: 318px;
   border-radius: 6px;
   position: relative;
 }
-.dentists .container .dentists__list .dentists__item .dentist__avatar {
+.dentist__avatar {
   width: 100%;
   height: 290px;
   position: absolute;
   bottom: 0;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-.dentists .container .dentists__list .dentists__item .avatar-1 {
+.dentists__list .dentists__item .avatar-1 {
   width: 130%;
   -o-object-position: -50px center;
-     object-position: -50px center;
+  object-position: -50px center;
 }
-.dentists .container .dentists__list .dentists__item .avatar-2 {
+.dentists__list .dentists__item .avatar-2 {
   width: 165%;
   -o-object-position: -90px center;
-     object-position: -90px center;
+  object-position: -90px center;
 }
-.dentists .container .dentists__list .dentists__item .avatar-3 {
+.dentists__list .dentists__item .avatar-3 {
   width: 180%;
   -o-object-position: -125px center;
-     object-position: -125px center;
+  object-position: -125px center;
 }
-.dentists .container .dentists__list .dentists__item .avatar-4 {
+.dentists__list .dentists__item .avatar-4 {
   -o-object-position: -50px center;
-     object-position: -50px center;
+  object-position: -50px center;
 }
-.dentists .container .dentists__list .dentists__item .dentist__name {
+.dentists__list .dentists__item .dentist__name {
   margin-top: 12px;
   color: var(--bg-color);
   text-align: center;
@@ -432,16 +558,17 @@ a {
   font-weight: 400;
   line-height: 28px;
 }
-.dentists .container .dentists__list .dentists__item .dentist__address {
+.dentists__list .dentists__item .dentist__address {
   text-align: center;
   font-size: 1.4rem;
   line-height: 26px;
 }
-.dentists .container .dentists__group-btn {
+
+.dentists__group-btn {
   display: flex;
   gap: 18px;
 }
-.dentists .container .dentists__group-btn > button {
+.dentists__group-btn button {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -451,18 +578,22 @@ a {
   justify-content: center;
   align-items: center;
 }
-.dentists .container .dentists__group-btn .material-symbols-outlined {
+.dentists__group-btn .material-symbols-outlined {
   font-size: 18px;
   font-weight: 100;
+  color: var(--desc-font-color);
 }
-.dentists .container .dentists__group-btn > button:hover {
+.dentists__group-btn button:hover {
   border: none;
   background-color: var(--active-bg-color);
 }
-.dentists .container .dentists__group-btn > button:hover .material-symbols-outlined {
+.dentists__group-btn button:hover .material-symbols-outlined {
   color: var(--active-font-color);
 }
 
+/* ----------------------------------------------------------------------- */
+
+/* TODO: Install */
 .install {
   display: flex;
   justify-content: center;
@@ -481,7 +612,7 @@ a {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .install .container .install__wrap-content {
   width: 100%;
@@ -501,14 +632,14 @@ a {
 }
 .install .container .install__wrap-content .install__content .install__title {
   width: 489px;
-  color: #FFF;
+  color: #fff;
   font-size: 5rem;
   font-weight: 600;
   line-height: 60px;
   letter-spacing: -1px;
 }
 .install .container .install__wrap-content .install__content .install__desc {
-  color: #FFF;
+  color: #fff;
   font-size: 1.8rem;
 }
 .install .container .install__wrap-content .install__content .install__store {
@@ -516,13 +647,20 @@ a {
   display: flex;
   gap: 28px;
 }
-.install .container .install__wrap-content .install__content .install__store .store {
+.install
+  .container
+  .install__wrap-content
+  .install__content
+  .install__store
+  .store {
   width: 135px;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #fff;
   background-color: transparent;
 }
+
+/* ----------------------------------------------------------------------- */
 
 .news {
   display: flex;
@@ -561,7 +699,7 @@ a {
 .news .container .right .news__new {
   width: 270px;
   border-radius: 12px;
-  border: 1px solid #E8EBEE;
+  border: 1px solid #e8ebee;
   display: flex;
   flex-direction: column;
 }
@@ -600,6 +738,9 @@ a {
   color: var(--active-bg-color);
 }
 
+/* ----------------------------------------------------------------------- */
+
+/* TODO: CTA */
 .cta {
   display: flex;
   justify-content: center;
@@ -612,7 +753,7 @@ a {
   align-items: center;
   gap: 38px;
 }
-.cta .container .cta__heading {
+.cta__heading {
   color: var(--bg-color);
   text-align: center;
   font-size: 5rem;
@@ -621,7 +762,7 @@ a {
   letter-spacing: -1px;
   position: relative;
 }
-.cta .container .cta__heading::after {
+.cta__heading::after {
   content: "";
   width: 136px;
   height: 2px;
@@ -631,79 +772,75 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
-.cta .container .cta__desc {
+.cta__desc {
   width: 617px;
   color: var(--desc-font-color);
   text-align: center;
 }
 
+/* TODO: Footer */
 .footer {
   background-color: var(--bg-color);
   display: flex;
   justify-content: center;
 }
+
 .footer .container {
   margin: 100px 0 42px 0;
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
-.footer .container .footer__main {
+
+.footer__main {
   display: flex;
   gap: 78px;
 }
-.footer .container .footer__main .footer__column {
+
+.footer__column {
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
-.footer .container .footer__main .footer__column .footer__item {
+
+.footer__item {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px;
 }
-.footer .container .footer__main .footer__column .footer__item .footer__desc {
-  width: 336px;
-  color: #A9B3BB;
+.footer__desc {
+  color: #a9b3bb;
   font-family: Open Sans;
   font-weight: 400;
+  font-size: 1.4rem;
 }
-.footer .container .footer__main .footer__column .footer__item .footer__heading {
-  color: #FFF;
+.footer__heading {
+  color: #fff;
   font-family: Open Sans;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 2.8rem;
 }
-.footer .container .footer__main .footer__column .footer__item .footer__link-list {
+.footer__link-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.footer .container .footer__main .footer__column .footer__item .footer__link-list .footer__link {
-  color: #A9B3BB;
+.footer__link {
+  color: #a9b3bb;
   font-family: Open Sans;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.6rem;
   white-space: nowrap;
 }
-.footer .container .footer__main .footer__column .footer__item input {
-  height: 46px;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #406181;
-  color: #9CA8B1;
-  font-family: Open Sans;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;
-}
-.footer .container .footer__main .footer__column .footer__item .footer__social-list {
+
+/* column number 4 */
+.footer__social-list {
   display: flex;
   gap: 10px;
 }
-.footer .container .footer__main .footer__column .footer__item .footer__social-list .icon {
+.footer__social-list .icon {
   width: 32px;
   height: 32px;
   background-color: #fff;
@@ -712,36 +849,53 @@ a {
   justify-content: center;
   align-items: center;
 }
-.footer .container .footer__main .footer__column .footer__item .footer__social-list .icon i {
-  color: #2e80ce;
+.footer__social-list .icon:hover path {
+  fill: #fff;
 }
-.footer .container .footer__main .footer__column .footer__item .footer__sub-form {
+.footer__social-list .icon:hover {
+  background-color: #2e80ce;
+}
+.footer__sub-form {
   display: flex;
   gap: 12px;
 }
-.footer .container .footer__main .footer__column .footer__item .footer__sub-form .footer__input-form {
+.footer__input-form {
   padding: 10px;
+  height: 46px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #406181;
+  color: #9ca8b1;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
 }
-.footer .container .footer__main .footer__column .footer__item .footer__sub-form .footer__sub-btn {
+.footer__sub-btn {
   width: 108px;
   height: 46px;
   border-radius: 4px;
-  color: #FFF;
+  color: #fff;
   font-family: Open Sans;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
 }
-.footer .container .footer__line {
+
+/* A Line of Footer */
+.footer__line {
   height: 1px;
   background-color: #406181;
 }
-.footer .container .footer__coppy-right {
-  color: #AAB3BA;
+
+/* Copyright of Footer */
+.footer__copy-right {
+  color: #aab3ba;
   text-align: center;
   font-family: Open Sans;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.6rem;
-}/*# sourceMappingURL=styles.css.map */
+}
