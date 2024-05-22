@@ -662,6 +662,7 @@ a {
 
 /* ----------------------------------------------------------------------- */
 
+/* TODO: News */
 .news {
   display: flex;
   justify-content: center;
@@ -671,12 +672,13 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.news .container .left {
+/* Left of News */
+.news .left {
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
-.news .container .left .news__heading {
+.news .left .news__heading {
   width: 470px;
   color: var(--bg-color);
   font-size: 5rem;
@@ -684,7 +686,7 @@ a {
   line-height: 60px;
   letter-spacing: -1px;
 }
-.news .container .left .news__all-links {
+.news .left .news__all-links {
   color: var(--bg-color);
   font-family: Inter;
   font-size: 1.8rem;
@@ -692,49 +694,50 @@ a {
   line-height: 28px;
   text-decoration-line: underline;
 }
-.news .container .right {
+/* Right of News */
+.news .right {
   display: flex;
   gap: 30px;
 }
-.news .container .right .news__new {
+.news .right .news__new {
   width: 270px;
   border-radius: 12px;
   border: 1px solid #e8ebee;
   display: flex;
   flex-direction: column;
 }
-.news .container .right .news__new > *:not(.new__img) {
+.news .right .news__new:hover {
+  border: none;
+  box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
+}
+.news .right .news__new > *:not(.new__img) {
   margin: 0 22px;
 }
-.news .container .right .news__new .new__img {
+.news .right .news__new .new__img {
   width: 100%;
   height: 172px;
   border-radius: 12px 12px 0 0;
 }
-.news .container .right .news__new .new__title {
+.news .right .news__new .new__title {
   margin-top: 18px;
   color: var(--bg-color);
   font-weight: 600;
   line-height: 26px;
 }
-.news .container .right .news__new .new__desc {
+.news .right .news__new .new__desc {
   margin-top: 10px;
   margin-bottom: 12px;
   color: var(--desc-font-color);
   font-size: 1.4rem;
   line-height: 24px;
 }
-.news .container .right .news__new .new__link {
+.news .right .news__new .new__link {
   margin-bottom: 21px;
   color: var(--bg-color);
   font-size: 1.4rem;
   font-weight: 400;
 }
-.news .container .right .news__new:hover {
-  border: none;
-  box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
-}
-.news .container .right .news__new:hover .new__link {
+.news .right .news__new:hover .new__link {
   color: var(--active-bg-color);
 }
 
