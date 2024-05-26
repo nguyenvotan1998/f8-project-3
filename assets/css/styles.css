@@ -595,42 +595,39 @@ a {
 
 /* TODO: Install */
 .install {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 .install .container {
+  height: 522px;
   position: relative;
 }
-.install .container .install__wrap-img {
+.install .install__wrap-img {
+  margin-left: 70px;
   position: absolute;
-  bottom: 0;
-  left: 70px;
+  z-index: 2;
   width: 284px;
   height: 522px;
+  background-image: url("../img/install__img.png");
+  background-repeat: no-repeat;
+  background-size: 268% 122%;
+  background-position: center 50%;
 }
-.install .container .install__wrap-img .install__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-.install .container .install__wrap-content {
+.install .install__wrap-content {
+  position: absolute;
+  top: 95px;
   width: 100%;
   height: 427px;
-  padding-right: 70px;
   background-color: var(--active-bg-color);
   border-radius: 4px;
   display: flex;
   justify-content: end;
   align-items: center;
+  padding-right: 70px;
 }
-.install .container .install__wrap-content .install__content {
-  width: 586px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.install .container .install__wrap-content .install__content .install__title {
+
+.install__title {
   width: 489px;
   color: #fff;
   font-size: 5rem;
@@ -638,26 +635,49 @@ a {
   line-height: 60px;
   letter-spacing: -1px;
 }
-.install .container .install__wrap-content .install__content .install__desc {
+.install__desc {
+  margin-top: 18px;
+  width: 586px;
+  height: 60px;
   color: #fff;
   font-size: 1.8rem;
 }
-.install .container .install__wrap-content .install__content .install__store {
-  margin-top: 20px;
+.install__store {
+  margin-top: 38px;
   display: flex;
   gap: 28px;
 }
-.install
-  .container
-  .install__wrap-content
-  .install__content
-  .install__store
-  .store {
+.install__store .store {
   width: 135px;
   height: 40px;
-  border-radius: 5px;
   border: 1px solid #fff;
-  background-color: transparent;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.store .left {
+  display: flex;
+  align-items: center;
+}
+.store .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+.store span {
+  color: #fff;
+}
+.store span:first-child {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.store span:not(:first-child) {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
 }
 
 /* ----------------------------------------------------------------------- */
