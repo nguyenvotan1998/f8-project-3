@@ -58,14 +58,14 @@ a {
   align-items: center;
   gap: 6px;
 }
-.logo .logo__name {
+.logo__name {
   width: 50px;
   color: #fff;
   text-align: right;
   font-size: 1.2rem;
   line-height: 1.4rem;
 }
-.logo .logo__name::first-line {
+.logo__name::first-line {
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -77,6 +77,8 @@ a {
   line-height: 6rem;
   letter-spacing: -0.1rem;
 }
+
+/* ----------------------------------------------------------------------- */
 
 /* TODO: Header */
 .header {
@@ -91,7 +93,6 @@ a {
   display: flex;
   flex-direction: column;
 }
-
 /* Top of Header */
 .header__top {
   display: flex;
@@ -154,31 +155,30 @@ a {
   line-height: 8rem;
   letter-spacing: -0.14rem;
 }
-.header .container .hero .hero__left .hero__desc {
+.hero__desc {
   margin-top: 22px;
   width: 468px;
   color: var(--none-active-font-color);
   font-size: 1.8rem;
 }
-.header .container .hero .hero__left .hero__contact {
+.hero__contact {
   margin-top: 38px;
   display: flex;
   gap: 38px;
   align-items: center;
 }
-.header .container .hero .hero__left .hero__contact .hero__book-btn {
+.hero__book-btn {
   color: var(--active-font-color);
   width: 205px;
   font-size: 1.8rem;
   font-weight: 400;
 }
-.header .container .hero .hero__left .hero__contact > a {
+.hero__contact > a {
   color: var(--active-font-color);
   font-size: 1.8rem;
   font-weight: 400;
 }
-
-.header .container .hero .hero__right {
+.hero__right {
   width: 540px;
   height: 540px;
   display: flex;
@@ -211,7 +211,7 @@ a {
     left: 330px;
   }
 }
-.hero .hero__right .hero__img {
+.hero__img {
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 6px;
@@ -226,7 +226,7 @@ a {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-.header .container .hero .hero__right .img-02 {
+.hero .img-02 {
   width: 210px;
   height: 410px;
   position: absolute;
@@ -238,6 +238,8 @@ a {
   animation-direction: alternate;
 }
 
+/* ----------------------------------------------------------------------- */
+
 /* TODO: Main content */
 .main {
   margin: 170px 0;
@@ -246,6 +248,9 @@ a {
   gap: 170px;
 }
 
+/* ----------------------------------------------------------------------- */
+
+/* TODO: Services */
 .services {
   display: flex;
   justify-content: center;
@@ -257,24 +262,24 @@ a {
   justify-content: center;
   gap: 18px;
 }
-.services .container .services__title {
+.services__title {
   text-align: center;
 }
-.services .container .services__desc {
+.services__desc {
   width: 468px;
   text-align: center;
   font-size: 1.8rem;
 }
-.services .container .services__illustration {
+.services__illustration {
   margin-top: 52px;
   display: flex;
   gap: 130px;
   align-items: center;
 }
-.services .container .services__illustration .left {
+.services__illustration .left {
   display: flex;
 }
-.services .container .services__illustration .left .services__img {
+.services__img {
   width: 570px;
   height: 570px;
   border-radius: 12px;
@@ -283,28 +288,16 @@ a {
   -o-object-position: 0 0;
   object-position: 0 0;
 }
-.services .container .services__illustration .right {
+.services__illustration .right {
   width: 470px;
 }
-.services
-  .container
-  .services__illustration
-  .right
-  .services__list
-  .services__item {
+.services__item {
   display: flex;
   padding: 21px 0 20px 22px;
   border-radius: 10px;
   background: #fff;
 }
-.services
-  .container
-  .services__illustration
-  .right
-  .services__list
-  .services__item
-  .left
-  .item__icon {
+.services__item .left .item__icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -313,78 +306,35 @@ a {
   align-items: center;
   justify-content: center;
 }
-.services
-  .container
-  .services__illustration
-  .right
-  .services__list
-  .services__item
-  .left
-  .item__icon
-  i {
+.services__item .left .item__icon i {
   font-size: 3rem;
   color: var(--bg-color);
 }
-.services
-  .container
-  .services__illustration
-  .right
-  .services__list
-  .services__item
-  .right {
+
+.services__item .right {
   margin-left: 19px;
 }
-.services
-  .container
-  .services__illustration
-  .right
-  .services__list
-  .services__item
-  .right
-  .item__title {
+
+.services__item .right .item__title {
   color: var(--bg-color);
   font-size: 18px;
   font-weight: 600;
   line-height: normal;
 }
-.services
-  .container
-  .services__illustration
-  .right
-  .services__list
-  .services__item
-  .right
-  .item__desc {
+
+.services__item .right .item__desc {
   margin-top: 8px;
 }
-.services
-  .container
-  .services__illustration
-  .right
-  .services__list
-  .services__item:hover {
+.services__item:hover {
   box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
 }
-.services
-  .container
-  .services__illustration
-  .right
-  .services__list
-  .services__item:hover
-  .item__icon {
+.services__item:hover .item__icon {
   background-color: var(--active-bg-color);
 }
-.services
-  .container
-  .services__illustration
-  .right
-  .services__list
-  .services__item:hover
-  .item__icon
-  i {
+.services__item:hover .item__icon i {
   color: var(--active-font-color);
 }
-.services .container .services__illustration .right .services__btn {
+.services__btn {
   margin-top: 55px;
   color: var(--active-font-color);
   border-radius: 30px;
@@ -392,6 +342,9 @@ a {
   font-weight: 400;
 }
 
+/* ----------------------------------------------------------------------- */
+
+/* TODO: Procedure */
 .procedure {
   background-color: #f6fbff;
   display: flex;
@@ -400,16 +353,16 @@ a {
 .procedure .container {
   margin: 100px 0;
 }
-.procedure .container .procedure__desc {
+.procedure__desc {
   width: 468px;
   margin-top: 18px;
   font-size: 1.8rem;
 }
-.procedure .container .procedure__list {
+.procedure__list {
   display: flex;
   gap: 30px;
 }
-.procedure .container .procedure__list .procedure__item {
+.procedure__item {
   margin-top: 70px;
   border: #eaf6ff solid 16px;
   padding: 43px 42px;
@@ -418,26 +371,28 @@ a {
   gap: 18px;
   transition: border-color 1s ease, color 1s ease, transform 1s ease;
 }
-.procedure .container .procedure__list .procedure__item .item__icon {
+.procedure__item .item__icon {
   display: flex;
 }
-.procedure .container .procedure__list .procedure__item .item__title {
+.procedure__item .item__title {
   color: #10375c;
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
   line-height: 36px;
 }
-.procedure .container .procedure__list .procedure__item .item__desc {
+.procedure__item .item__desc {
   margin-top: 10px;
 }
-.procedure .container .procedure__list .procedure__item:hover {
+.procedure__item:hover {
   border-color: #2e80ce;
   transform: translateY(-16px);
 }
-.procedure .container .procedure__list .procedure__item:hover .item__link {
+.procedure__item:hover .item__link {
   color: #2e80ce;
 }
+
+/* ----------------------------------------------------------------------- */
 
 .commercial {
   display: flex;
@@ -448,18 +403,18 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.commercial .container .commercial__album {
+.commercial__album {
   width: 570px;
   height: 491px;
   position: relative;
 }
-.commercial .container .commercial__album .commercial__img {
+.commercial__img {
   position: absolute;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 6px;
 }
-.commercial .container .commercial__album .img-1 {
+.commercial__album .img-1 {
   width: 512px;
   height: 370px;
   -o-object-position: 0 center;
@@ -467,7 +422,7 @@ a {
   top: 0;
   left: 0;
 }
-.commercial .container .commercial__album .img-2 {
+.commercial__album .img-2 {
   width: 332px;
   height: 370px;
   -o-object-position: 0 center;
@@ -475,17 +430,17 @@ a {
   bottom: 0;
   right: 0;
 }
-.commercial .container .commercial__content {
+.commercial__content {
   width: 470px;
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-.commercial .container .commercial__content .commercial__desc {
+.commercial__desc {
   font-size: 1.8rem;
   line-height: 3rem;
 }
-.commercial .container .commercial__content .commercial__btn {
+.commercial__btn {
   margin-top: 20px;
 }
 
@@ -531,26 +486,26 @@ a {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.dentists__list .dentists__item .avatar-1 {
+.dentists__item .avatar-1 {
   width: 130%;
   -o-object-position: -50px center;
   object-position: -50px center;
 }
-.dentists__list .dentists__item .avatar-2 {
+.dentists__item .avatar-2 {
   width: 165%;
   -o-object-position: -90px center;
   object-position: -90px center;
 }
-.dentists__list .dentists__item .avatar-3 {
+.dentists__item .avatar-3 {
   width: 180%;
   -o-object-position: -125px center;
   object-position: -125px center;
 }
-.dentists__list .dentists__item .avatar-4 {
+.dentists__item .avatar-4 {
   -o-object-position: -50px center;
   object-position: -50px center;
 }
-.dentists__list .dentists__item .dentist__name {
+.dentists__item .dentist__name {
   margin-top: 12px;
   color: var(--bg-color);
   text-align: center;
@@ -558,12 +513,11 @@ a {
   font-weight: 400;
   line-height: 28px;
 }
-.dentists__list .dentists__item .dentist__address {
+.dentists__item .dentist__address {
   text-align: center;
   font-size: 1.4rem;
   line-height: 26px;
 }
-
 .dentists__group-btn {
   display: flex;
   gap: 18px;
@@ -698,7 +652,7 @@ a {
   flex-direction: column;
   gap: 28px;
 }
-.news .left .news__heading {
+.news__heading {
   width: 470px;
   color: var(--bg-color);
   font-size: 5rem;
@@ -706,7 +660,7 @@ a {
   line-height: 60px;
   letter-spacing: -1px;
 }
-.news .left .news__all-links {
+.news__all-links {
   color: var(--bg-color);
   font-family: Inter;
   font-size: 1.8rem;
@@ -719,45 +673,45 @@ a {
   display: flex;
   gap: 30px;
 }
-.news .right .news__new {
+.news__new {
   width: 270px;
   border-radius: 12px;
   border: 1px solid #e8ebee;
   display: flex;
   flex-direction: column;
 }
-.news .right .news__new:hover {
+.news__new:hover {
   border: none;
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
 }
-.news .right .news__new > *:not(.new__img) {
+.news__new > *:not(.new__img) {
   margin: 0 22px;
 }
-.news .right .news__new .new__img {
+.new__img {
   width: 100%;
   height: 172px;
   border-radius: 12px 12px 0 0;
 }
-.news .right .news__new .new__title {
+.new__title {
   margin-top: 18px;
   color: var(--bg-color);
   font-weight: 600;
   line-height: 26px;
 }
-.news .right .news__new .new__desc {
+.new__desc {
   margin-top: 10px;
   margin-bottom: 12px;
   color: var(--desc-font-color);
   font-size: 1.4rem;
   line-height: 24px;
 }
-.news .right .news__new .new__link {
+.new__link {
   margin-bottom: 21px;
   color: var(--bg-color);
   font-size: 1.4rem;
   font-weight: 400;
 }
-.news .right .news__new:hover .new__link {
+.news__new:hover .new__link {
   color: var(--active-bg-color);
 }
 
@@ -801,31 +755,29 @@ a {
   text-align: center;
 }
 
+/* ----------------------------------------------------------------------- */
+
 /* TODO: Footer */
 .footer {
   background-color: var(--bg-color);
   display: flex;
   justify-content: center;
 }
-
 .footer .container {
   margin: 100px 0 42px 0;
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
-
 .footer__main {
   display: flex;
   gap: 78px;
 }
-
 .footer__column {
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
-
 .footer__item {
   display: flex;
   flex-direction: column;
@@ -857,7 +809,6 @@ a {
   line-height: 2.6rem;
   white-space: nowrap;
 }
-
 /* column number 4 */
 .footer__social-list {
   display: flex;
@@ -906,13 +857,11 @@ a {
   font-weight: 600;
   line-height: 26px;
 }
-
 /* A Line of Footer */
 .footer__line {
   height: 1px;
   background-color: #406181;
 }
-
 /* Copyright of Footer */
 .footer__copy-right {
   color: #aab3ba;
